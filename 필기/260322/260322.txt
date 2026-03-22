@@ -32,3 +32,19 @@ h4>lorem4 하면 h4만들고 내용으로 lorem 바로 쓸 수 있음!
 
 div 안에 img를 넣으면 div구획만큼 잘라줄 수 있다.
 https://special-zebra-r7w9xpx6w4vhpj45-5500.app.github.dev/html/webfonts/fa-solid-900.woff2
+
+-----
+테이블은 요즘은 잘 안씀..
+tr -> 가로 한 줄
+td -> 한 칸
+thead => 밑에 tr > th 가 올수있는데 타이틀역할을 함.
+, tbody, tfoot => 
+td, colspan = 내 줄에서 n칸을 차지하도록 수정해줘!
+td, rowspan => 내 칸에서 내가 2줄을 차지하도록 수정해줘
+
+구획이 나눠지면 rowspan이 적용되지 않는다.
+tr에 적용하지 않기
+
+submit 할 기준은 form이 감싸는 input 태그이다.
+
+radio는 name으로 묶어준다. name중에 하나만 선택됨.
