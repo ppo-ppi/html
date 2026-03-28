@@ -116,7 +116,6 @@ https://www.figma.com/design/PVEkW7ULZCR106amxANoNp/2026.03.14-html-css%EA%B0%9C
 * `h2` : 콘텐츠 제목
 * `h3` : 아티클 제목
 * `h4`
-
   * subtitle, GNB 등에 사용
 * `h5`, `h6`
 
