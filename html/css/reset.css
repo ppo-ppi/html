@@ -1,0 +1,69 @@
+/* ===== Full Reset CSS ===== */
+
+/* 모든 요소 초기화 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html, body 기본 설정 */
+html, body {
+  height: 100%;
+}
+
+/* body 기본 */
+body {
+  line-height: 1;
+}
+
+/* 제목 태그 완전 초기화 */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* 리스트 완전 초기화 */
+ul, ol {
+  list-style: none;
+}
+
+/* 링크 초기화 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 이미지 */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 버튼, 인풋 */
+button, input, textarea, select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* 테이블 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 인용 */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}

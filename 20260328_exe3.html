@@ -5,32 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="html/css/all.min.css">
+    <link rel="stylesheet" href="html/css/reset.css">
     <style>
         /* 헤더탑 */
-        .hdr-top-wrap{}
-        .hdr-top-wrap>.hdr-top{}
+        .hdr-top-wrap{
+            background-color: #212517;
+        }
+        .hdr-top-wrap>.hdr-top{
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hdr-top-wrap>.hdr-top>i{
+           line-height: 40px;
+           color: #fff;
+           font-size: 35px;
+        }
 
         /* 헤더 */
-        .hdr-wrap{}
-        .hdr-wrap>header{}
-        .hdr-wrap>header>h1{}
-        .hdr-wrap>header>ul.gnb{}
+        .hdr-wrap{
+            background-color: #a31f30;
+        }
+        .hdr-wrap>header{
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            line-height: 80px;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            text-transform: capitalize;
+        }
+
+        .hdr-wrap>header>h1{
+            font-size: 25px;
+        }
+        .hdr-wrap>header>ul.gnb{
+            width: calc(100% / 12 * 2);
+            display: flex;
+            column-gap: 20px;
+        }
         .hdr-wrap>header>ul.gnb>li{}
-        .hdr-wrap>header>ul.gnb>li>a{}
+        .hdr-wrap>header>ul.gnb>li>a{
+            font-size: 20px;
+        }
 
         /* 콘텐츠공통 */
-        .content-wrap{}
-        .content-wrap>.content{}
+        .content-wrap{
+            margin-top: 80px;
+        }
+        .content-wrap>.content{
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
         .content-wrap>.content>header{}
-        .content-wrap>.content>header>h2{}
-        .content-wrap>.content>header>h4{}
-        .content-wrap>.content>section{}
+        .content-wrap>.content>header>h2{
+            line-height: 80px;
+            text-align: center;
+            font-size: 40px;
+            text-transform: capitalize;
+        }
+        .content-wrap>.content>header>h4{
+            height: 40px;
+            line-height: 20px;
+            width: calc(100% / 12 * 6);
+            text-align: center;
+            margin: 0 auto;
+            overflow: hidden;
+            font-size: 12px;
+        }
+        .content-wrap>.content>section{
+            margin-top: 40px;
+        }
         .content-wrap>.content>section>article{}
-        .content-wrap>.content>section>article>.image{}
-        .content-wrap>.content>section>article>.texts{}
-        .content-wrap>.content>section>article>.texts>h3{}
-        .content-wrap>.content>section>article>.texts>h4{}
-        .content-wrap>.content>section>article>.texts>p{}
+        .content-wrap>.content>section article>.image{
+            height: 320px;
+            background-color: #ccc;
+            color: transparent;
+        }
+        .content-wrap>.content>section article>.texts{
+            padding: 40px 20px;
+        }
+        .content-wrap>.content>section article>.texts>h3{
+            line-height: 40px;
+            font-size: 25px;
+            text-transform: capitalize;
+        }
+        .content-wrap>.content>section article>.texts>h4{
+            line-height: 40px;
+            font-size: 14px;
+        }
+        .content-wrap>.content>section article>.texts>p{
+            height: 80px;
+            line-height: 20px;
+            overflow: hidden;
+            font-size: 12px;
+        }
         
         /* 콘텐츠1 */
         .content-wrap.content1{}
@@ -39,34 +112,93 @@
         .content-wrap.content1>.content.cnt1>header>h2{}
         .content-wrap.content1>.content.cnt1>header>h4{}
         .content-wrap.content1>.content.cnt1>section{}
-        .content-wrap.content1>.content.cnt1>section>.art-top{}
-        .content-wrap.content1>.content.cnt1>section>.art-top>article{}
+        .content-wrap.content1>.content.cnt1>section>.art-top{
+            display: flex;
+            column-gap: 20px;
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top>article{
+            width: calc(50% - 10px)
+        }
         .content-wrap.content1>.content.cnt1>section>.art-top>article>.image{}
-        .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts{}
+        .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts{
+            padding-left: calc(100% /6 * 0.6);
+            padding-right: calc(100% /6 * 2);
+        }
         .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>h3{}
         .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>h4{}
         .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>p{}
-        .content-wrap.content1>.content.cnt1>section>.art-btm{}
-        .content-wrap.content1>.content.cnt1>section>.art-btm>article{}
+        .content-wrap.content1>.content.cnt1>section>.art-top article>.texts>p>.icons{
+            line-height: 40px;
+            font-size: 23px;
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-btm{
+            display: flex;
+            column-gap: 20px;
+            margin-top: 40px;
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article{
+            width: calc(100% / 3 - 10px);
+        }
         .content-wrap.content1>.content.cnt1>section>.art-btm>article>.image{}
         .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts{}
         .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts>h3{}
         .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts>p{}
-
+        .content-wrap.content1>.content.cnt1>section>.art-btm article>.texts>p>.icons{
+            line-height: 40px;
+            font-size: 23px;
+        }
         /* 콘텐츠2 */
         .content-wrap.content2{}
-        .content-wrap.content2>.content.cnt2{}
-        .content-wrap.content2>.content.cnt2>header{}
+        .content-wrap.content2>.content.cnt2{
+            width: 100%;
+            max-width: none;
+        }
+        .content-wrap.content2>.content.cnt2>header{
+            background-color: #f00;
+            padding-top: 80px;
+            padding-bottom: 300px;
+        }
         .content-wrap.content2>.content.cnt2>header>h2{}
-        .content-wrap.content2>.content.cnt2>header>h4{}
-        .content-wrap.content2>.content.cnt2>section{}
-        .content-wrap.content2>.content.cnt2>section>article{}
-        .content-wrap.content2>.content.cnt2>section>article>.image{}
-        .content-wrap.content2>.content.cnt2>section>article>.texts{}
+        .content-wrap.content2>.content.cnt2>header>h4{
+            width: calc(80% / 12 * 6);
+            max-width: 520px;
+        }
+        .content-wrap.content2>.content.cnt2>section{
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            margin-top: -260px;
+        }
+        .content-wrap.content2>.content.cnt2>section>article{
+            display: flex;
+        }
+        .content-wrap.content2>.content.cnt2>section>article>.image{
+            height: 440px;
+            width: 50%;
+        }
+        .content-wrap.content2>.content.cnt2>section>article>.texts{
+            width: 50%;
+            background-color: #fff;
+            text-align: center;
+            padding: 80px calc(100% / 12 * 1);
+        }
         .content-wrap.content2>.content.cnt2>section>article>.texts>h3{}
-        .content-wrap.content2>.content.cnt2>section>article>.texts>h4{}
-        .content-wrap.content2>.content.cnt2>section>article>.texts>p{}
-        .content-wrap.content2>.content.cnt2>section>article>.texts>button{}
+        .content-wrap.content2>.content.cnt2>section>article>.texts>h4{
+            height: 40px;
+            overflow: hidden;
+        }
+        .content-wrap.content2>.content.cnt2>section>article>.texts>p{
+            height: 120px;
+            margin-top: 20px;
+        }
+        .content-wrap.content2>.content.cnt2>section>article>.texts>button{
+            line-height: 40px;
+            width: calc(100% / 6 * 4);
+            background-color: #212517;
+            margin-top: 20px;
+            color: #fff;
+            border-radius: 20px;
+        }
 
         /* 콘텐츠3 */
         .content-wrap.content3{}
@@ -74,18 +206,46 @@
         .content-wrap.content3>.content.cnt3>header{}
         .content-wrap.content3>.content.cnt3>header>h2{}
         .content-wrap.content3>.content.cnt3>header>h4{}
-        .content-wrap.content3>.content.cnt3>section{}
-        .content-wrap.content3>.content.cnt3>section>article{}
-        .content-wrap.content3>.content.cnt3>section>article>.image{}
+        .content-wrap.content3>.content.cnt3>section{
+            display: flex;
+            column-gap: 20px;
+        }
+        .content-wrap.content3>.content.cnt3>section>article{
+            width: calc(100% / 4 - 10px);
+        }
+        .content-wrap.content3>.content.cnt3>section>article>.image{
+            height: 200px;
+        }
         .content-wrap.content3>.content.cnt3>section>article>.texts{}
         .content-wrap.content3>.content.cnt3>section>article>.texts>h3{}
         .content-wrap.content3>.content.cnt3>section>article>.texts>p{}
 
         /* 푸터 */
-        .ftr-wrap{}
-        .ftr-wrap>footer{}
-        .ftr-wrap>footer>h4{}
-        .ftr-wrap>footer>address{}
+        .ftr-wrap{
+            margin-top: 80px;
+            background-color: #a31f30;
+        }
+        .ftr-wrap>footer{
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .ftr-wrap>footer>h4{
+            line-height: 80px;
+            text-align: center;
+        }
+        .ftr-wrap>footer>address{
+            height: 40px;
+            line-height: 20px;
+            width: calc(100% / 12 * 8);
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+        .ftr-wrap>footer>.icons{
+            line-height: 80px;
+            text-align: center;
+        }
 
         </style>
     <title>20260328_exe3</title>
@@ -207,7 +367,11 @@
                         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maxime.</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sequi obcaecati adipisci
                             voluptas. Explicabo, dolores culpa vero eius tempora enim qui, quibusdam temporibus adipisci
-                            laborum, amet ipsa impedit minus cumque?</p>
+                            laborum, amet ipsa impedit minus cumque?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sequi obcaecati adipisci
+                            voluptas. Explicabo, dolores culpa vero eius tempora enim qui, quibusdam temporibus adipisci
+                            laborum, amet ipsa impedit minus cumque?
+                        </p>
                         <button>BUTTON</button>
                     </div>
                 </article>
