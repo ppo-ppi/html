@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/html/css/all.min.css">
+    <link rel="stylesheet" href="/html/css/reset.css">
+    <title>20260328_exe</title>
+    <style>
+        /* 피그마 그리드 한칸이 세로 = 40px 궈터 = 10px */
+        /* 헤더탑 */
+        .hdr-top-wrap {
+            background: rgb(243, 168, 168);
+        }
+        .hdr-top-wrap>.hdr-top {
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto; /* 요소를 가운데정렬*/
+            line-height: 20px;
+            text-align: center; /* 자식요소 가운데 정렬*/
+        }
+        .hdr-top-wrap>.hdr-top>i {}
+
+        /* 헤더 */
+        .hdr-wrap {
+            background-color: rgba(188, 188, 236, 0.274);
+        }
+        .hdr-wrap>header {
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            line-height: 80px; /* 그리드를 두칸 차지하고있어서.*/
+            display: flex;
+            justify-content: space-between;
+        }
+        .hdr-wrap>header>h1 {
+            font-size: 25px;
+        }
+        .hdr-wrap>header>ul {
+            display: flex;
+            column-gap: 20px;
+            width:calc(100% / 12 * 3); /* width를 주는 이유 = 주지않으면 자유분방하게 커짐;*/
+            /* maxwidth에 의해 헤더 크기는 약 840px이고 이것을 100%로 계산하면 얼추맞는듯함.. */
+        }
+        .hdr-wrap>header>ul>li {}
+        .hdr-wrap>header>ul>li>a {
+            font-size: 20px;
+        }
+
+        /* 공통 */
+        .content-wrap {
+            /* margin-top: 80px; */
+            /* 형제요소들끼리 떨어트릴땐 margin을 쓰는듯함. 근데 이걸 줘서 */
+            /* 콘텐츠를 띄우니까 백그라운드 컬러가 안먹고 공백이 생김 */
+        }
+        .content-wrap>.content {
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+        .content-wrap>.content>header {
+            text-align: center;
+        }
+        .content-wrap>.content>header>h2 {
+            line-height: 80px;
+            font-size: 40px;
+        }
+        .content-wrap>.content>header>h4 {
+            line-height: 20px;
+            width: calc(100% / 12 * 6);
+            margin: 0 auto;
+        }
+        .content-wrap>.content>section {
+            margin-top: 40px;
+        }
+        .content-wrap>.content>section>article {}
+        .content-wrap>.content>section article>.image {
+            height: 320px;
+            background: #dfaec9ce;
+        }
+        .content-wrap>.content>section>article>.texts {}
+        .content-wrap>.content>section article>.texts>h3 {
+            line-height: 40px;
+            font-size: 25px;
+        }
+        .content-wrap>.content>section article>.texts>h4 {
+            line-height: 40px;
+            font-size: 14px;
+            margin: 0 auto;
+        }
+        .content-wrap>.content>section article>.texts>p {
+            line-height: 20px;
+            font-size: 12px;
+            height: 80px; /* p 에 height를 주는건 글자가 길어져도 이 상자만큼만 노출하라는 의미같다.*/
+            overflow: hidden;
+        }
+        .content-wrap>.content>section>article>.texts>.icons {}
+
+        /* 컨텐츠1 */
+        .content-wrap.content1{
+            /* background: rgb(219, 250, 240); */
+        }
+        .content-wrap.content1>.content.cnt1{}
+        .content-wrap.content1>.content.cnt1>header{}
+        .content-wrap.content1>.content.cnt1>header>h2{
+            
+        }
+        .content-wrap.content1>.content.cnt1>header>h4{
+            
+        }
+        .content-wrap.content1>.content.cnt1>section{
+            
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top{
+            display: flex;
+            column-gap: 20px;
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top>article{
+            width: calc(50% - 10px)
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top>article>.image{}
+        .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts{
+            padding: 40px 20px; /* 왜 좌우는 20픽셀이였지..ㅜ*/
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>h3{
+
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>h4{
+
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>p{
+
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>.icons{}
+        .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>.icons>i{
+            font-size: 23px;
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-btm{
+            display: flex;
+            column-gap: 20px;
+
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article{
+            width: calc(100% / 3 - 10px);
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article>.image{}
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts{
+            padding: 40px 20px;
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts>h3{}
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts>p{}
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts>.icons{}
+
+        /* 컨텐츠2 */
+        .content-wrap.content2{
+            
+        }
+        .content-wrap.content2>.content.cnt2{
+            /* 헤더를 화면 전체에 표현하기 위해 초기화 */
+            width: 100%;
+            max-width: none;
+        }
+        .content-wrap.content2>.content.cnt2>header{
+            background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+            /* 백그라운드 이미지를 길게 늘려서 보여주기 위함*/
+            padding-top: 80px;
+            padding-bottom: 300px;
+        }
+        .content-wrap.content2>.content.cnt2>header>h2{}
+        .content-wrap.content2>.content.cnt2>header>h4{}
+        .content-wrap.content2>.content.cnt2>section{
+            /* 컨텐츠 영역에서 다시 80% 적용*/
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+            /* 섹션을 끌어올려서 헤더를 덮기 위함 */
+            margin-top: -260px
+        }
+        .content-wrap.content2>.content.cnt2>section>article{
+            display: flex;
+        }
+        .content-wrap.content2>.content.cnt2>section>article>.image{
+            background-color: peru;
+            height: 440px;
+            width: 50%; /* image랑 texts에 50%를 각각 줘야한다. 그래야 나란히 놓임 */
+        }
+        .content-wrap.content2>.content.cnt2>section>article>.texts{
+            width: 50%;
+            padding: 80px 80px; /*  calc(100% / 12 * 1) ?*/
+            text-align: center;
+            background-color: #fff;
+        }
+        .content-wrap.content2>.content.cnt2>section>article>.texts>h3{}
+        .content-wrap.content2>.content.cnt2>section>article>.texts>h4{}
+        .content-wrap.content2>.content.cnt2>section>article>.texts>p{
+            height: 120px;
+            margin-top: 20px;
+        }
+        .content-wrap.content2>.content.cnt2>section>article>.texts>button{
+            line-height: 40px;
+            width: calc(100% / 6 * 4);
+            background-color: rgba(81, 206, 179, 0.863);
+            margin-top: 20px;
+        }
+
+        /* 컨텐츠3 */
+        .content-wrap.content3{}
+        .content-wrap.content3>.content.cnt3{}
+        .content-wrap.content3>.content.cnt3>header{}
+        .content-wrap.content3>.content.cnt3>section{}
+        .content-wrap.content3>.content.cnt3>section>article{}
+        .content-wrap.content3>.content.cnt3>section>article>.image{}
+        .content-wrap.content3>.content.cnt3>section>article>.texts{}
+        .content-wrap.content3>.content.cnt3>section>article>.texts>h3{}
+        .content-wrap.content3>.content.cnt3>section>article>.texts>p{}
+
+        /* 푸터 */
+        .ftr-wrap{}
+        .ftr-wrap>footer{}
+        .ftr-wrap>footer>h4{}
+        .ftr-wrap>footer>address{}
+        .ftr-wrap>footer>.icons{}
+    </style>
+</head>
+
+<body>
+    <div class="hdr-top-wrap">
+        <div class="hdr-top">
+            <i class="fa-solid fa-sleigh"></i>
+        </div>
+    </div>
+    <div class="hdr-wrap">
+        <header>
+            <h1>logo Here</h1>
+            <ul>
+                <li><a>About</a></li>
+                <li><a>News</a></li>
+                <li><a>Portfolio</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="content-wrap content1">
+        <div class="content cnt1">
+            <header>
+                <h2>이번주 핫 아이템</h2>
+                <h4>이번주 핫 아이템들의 모음입니다이번주 핫 아이템들의 모음입니다이번주 핫 아이템들의 모음입니다이번주 핫 아이템들의 모음입니다이번주 핫 아이템들의 모음입니다이번</h4>
+            </header>
+            <section>
+                <div class="art-top">
+                    <article>
+                        <div class="image">이미지</div>
+                        <div class="texts">
+                            <h3>segmentTitle</h3>
+                            <h4>lorem5</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni unde sunt similique
+                                placeat,
+                                exercitationem, ipsam consectetur ratione repellendus aliquam aperiam reprehenderit eum
+                                vero
+                                facilis quasi neque autem officia nihil est!</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image">이미지</div>
+                        <div class="texts">
+                            <h3>segmentTitle</h3>
+                            <h4>lorem5</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni unde sunt similique
+                                placeat,
+                                exercitationem, ipsam consectetur ratione repellendus aliquam aperiam reprehenderit eum
+                                vero
+                                facilis quasi neque autem officia nihil est!</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="art-btm">
+                    <article>
+                        <div class="image">이미지</div>
+                        <div class="texts">
+                            <h3>segmentTitle</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni unde sunt similique
+                                placeat,
+                                exercitationem, ipsam consectetur ratione repellendus aliquam aperiam reprehenderit eum
+                                vero
+                                facilis quasi neque autem officia nihil est!</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image">이미지</div>
+                        <div class="texts">
+                            <h3>segmentTitle</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni unde sunt similique
+                                placeat,
+                                exercitationem, ipsam consectetur ratione repellendus aliquam aperiam reprehenderit eum
+                                vero
+                                facilis quasi neque autem officia nihil est!</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image">이미지</div>
+                        <div class="texts">
+                            <h3>segmentTitle</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni unde sunt similique
+                                placeat,
+                                exercitationem, ipsam consectetur ratione repellendus aliquam aperiam reprehenderit eum
+                                vero
+                                facilis quasi neque autem officia nihil est!</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- .content-wrap>.content>section article>.texts>h3 -->
+    <div class="content-wrap content2">
+        <div class="content cnt2">
+            <header>
+                <h2>ContentTitle</h2>
+                <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
+            </header>
+            <section>
+                <article>
+                    <div class="image">이미지</div>
+                    <div class="texts">
+                        <h3>segmentTitle</h3>
+                        <h4>subTitle</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aperiam eligendi sit.
+                            Odit
+                            magni qui, dolores voluptate cumque reprehenderit illum in officia saepe suscipit! Eum
+                            consequatur consectetur nulla et eius!</p>
+                        <button>button</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <div class="content-wrap content3">
+        <div class="content cnt3">
+            <header>
+                <h2>ContentTitle</h2>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+            </header>
+            <section>
+                <article>
+                    <div class="image">이미지</div>
+                    <div class="texts">
+                        <h3>segmentTitle</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni unde sunt similique placeat,
+                            exercitationem, ipsam consectetur ratione repellendus aliquam aperiam reprehenderit eum vero
+                            facilis quasi neque autem officia nihil est!</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image">이미지</div>
+                    <div class="texts">
+                        <h3>segmentTitle</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni unde sunt similique placeat,
+                            exercitationem, ipsam consectetur ratione repellendus aliquam aperiam reprehenderit eum vero
+                            facilis quasi neque autem officia nihil est!</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image">이미지</div>
+                    <div class="texts">
+                        <h3>segmentTitle</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni unde sunt similique placeat,
+                            exercitationem, ipsam consectetur ratione repellendus aliquam aperiam reprehenderit eum vero
+                            facilis quasi neque autem officia nihil est!</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image">이미지</div>
+                    <div class="texts">
+                        <h3>segmentTitle</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni unde sunt similique placeat,
+                            exercitationem, ipsam consectetur ratione repellendus aliquam aperiam reprehenderit eum vero
+                            facilis quasi neque autem officia nihil est!</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <div class="ftr-wrap">
+        <footer>
+            <h4>logoHere</h4>
+            <address>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, debitis.</address>
+            <div class="icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
