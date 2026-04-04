@@ -85,6 +85,10 @@
             height: 320px;
             background-color: #ccc;
             color: transparent;
+            /* 백그라운드 이미지 세트! */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
         .content-wrap>.content>section article>.texts{
             padding: 40px 20px;
@@ -119,10 +123,18 @@
         .content-wrap.content1>.content.cnt1>section>.art-top>article{
             width: calc(50% - 10px)
         }
-        .content-wrap.content1>.content.cnt1>section>.art-top>article>.image{}
+        .content-wrap.content1>.content.cnt1>section>.art-top>article>.image{
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top>article:nth-of-type(1)>.image{
+            background-image: url('./html/image/cnt1_image1.png');
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-top>article:nth-of-type(2)>.image{
+            background-image: url('./html/image/cnt1_image2.png');
+        }
         .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts{
             padding-left: calc(100% /6 * 0.6);
             padding-right: calc(100% /6 * 2);
+            border: 1px solid  #D9D9D9;
         }
         .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>h3{}
         .content-wrap.content1>.content.cnt1>section>.art-top>article>.texts>h4{}
@@ -140,7 +152,22 @@
             width: calc(100% / 3 - 10px);
         }
         .content-wrap.content1>.content.cnt1>section>.art-btm>article>.image{}
-        .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts{}
+
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article:nth-of-type(1)>.image{
+            background-image: url('./html/image/cnt1_image2-1.png');
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article:nth-of-type(2)>.image{
+            background-image: url('./html/image/cnt1_image2-2.png');
+        }
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article:nth-of-type(3)>.image{
+            background-image: url('./html/image/cnt1_image2-3.png');
+        }
+
+        .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts{
+            padding-left: calc(100% /6 * 0.6);
+            padding-right: calc(100% /6 * 2);
+            border: 1px solid  #D9D9D9;
+        }
         .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts>h3{}
         .content-wrap.content1>.content.cnt1>section>.art-btm>article>.texts>p{}
         .content-wrap.content1>.content.cnt1>section>.art-btm article>.texts>p>.icons{
@@ -157,6 +184,11 @@
             background-color: #f00;
             padding-top: 80px;
             padding-bottom: 300px;
+            background-image: url(./html/image/bg1.png);
+            background-size: 33.33% 100%; /*가로, 세로*/
+            color: #fff;
+            /* 가로로만 반복*/
+            background-repeat: repeat-x
         }
         .content-wrap.content2>.content.cnt2>header>h2{}
         .content-wrap.content2>.content.cnt2>header>h4{
@@ -171,11 +203,19 @@
         }
         .content-wrap.content2>.content.cnt2>section>article{
             display: flex;
+            box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
         }
         .content-wrap.content2>.content.cnt2>section>article>.image{
             height: 440px;
             width: 50%;
+            background-image: url('./html/image/cnt2_image1.png');
         }
+
+        .content-wrap.content2>.content.cnt2>section>article>.image>video{
+            height: 100%; /* 더이상 가로가 자동으로 켜지지 않는다. */
+            object-fit: cover;
+        }
+
         .content-wrap.content2>.content.cnt2>section>article>.texts{
             width: 50%;
             background-color: #fff;
@@ -198,6 +238,12 @@
             margin-top: 20px;
             color: #fff;
             border-radius: 20px;
+            transition: background-color 1s;
+        }
+
+        .content-wrap.content2>.content.cnt2>section>article>.texts>button:hover{
+            /* outline: 3px solid red; */
+            background-color: red;
         }
 
         /* 콘텐츠3 */
@@ -212,11 +258,33 @@
         }
         .content-wrap.content3>.content.cnt3>section>article{
             width: calc(100% / 4 - 10px);
+            height: 200px;
+            overflow: hidden;
+        }
+        .content-wrap.content3>.content.cnt3>section>article:hover>.texts{
+            margin-top: -200px;
         }
         .content-wrap.content3>.content.cnt3>section>article>.image{
             height: 200px;
         }
-        .content-wrap.content3>.content.cnt3>section>article>.texts{}
+        .content-wrap.content3>.content.cnt3>section article:nth-of-type(1)>.image{
+            background-image: url('./html/image/cnt3_image1.png');
+        }
+        .content-wrap.content3>.content.cnt3>section article:nth-of-type(2)>.image{
+             background-image: url('./html/image/cnt3_image2.png');
+        }
+        .content-wrap.content3>.content.cnt3>section article:nth-of-type(3)>.image{
+             background-image: url('./html/image/cnt3_image3.png');
+        }
+        .content-wrap.content3>.content.cnt3>section article:nth-of-type(4)>.image{
+             background-image: url('./html/image/cnt3_image4.png');
+        }
+
+        .content-wrap.content3>.content.cnt3>section>article>.texts{
+            color: #fff;
+            background-color: rgba(51, 51, 51, 0.4);
+            transition: margin-top 0.5s;
+        }
         .content-wrap.content3>.content.cnt3>section>article>.texts>h3{}
         .content-wrap.content3>.content.cnt3>section>article>.texts>p{}
 
@@ -229,22 +297,29 @@
             width: 80%;
             max-width: 1080px;
             margin: 0 auto;
+            color: #fff; /* 부모에게 먼저 주고 적용되는지 확인*/
+            padding-top: 40px;
+            padding-bottom: 80px;
         }
         .ftr-wrap>footer>h4{
             line-height: 80px;
             text-align: center;
+            font-size: 30px;
         }
         .ftr-wrap>footer>address{
-            height: 40px;
-            line-height: 20px;
+            height: 40px; /* 한칸 */
+            line-height: 20px; /* 두줄차지해서 */
             width: calc(100% / 12 * 8);
             margin: 0 auto;
             text-align: center;
             overflow: hidden;
+            font-size: 12px;
         }
         .ftr-wrap>footer>.icons{
             line-height: 80px;
             text-align: center;
+            /* 글자는 높이기준 */
+            font-size: 45px;
         }
 
         </style>
@@ -361,7 +436,9 @@
             </header>
             <section>
                 <article>
-                    <div class="image">이미지</div>
+                    <div class="image">
+                        <video src="./html/image/cnt2.mp4" autoplay muted loop></video>
+                    </div>
                     <div class="texts">
                         <h3>segmentTitle</h3>
                         <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, maxime.</h4>
