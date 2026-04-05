@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="html/css/all.min.css">
     <link rel="stylesheet" href="html/css/reset.css">
     <style>
+
         /* 헤더탑 */
         .hdr-top-wrap{
             background-color: #212517;
@@ -320,6 +321,22 @@
             text-align: center;
             /* 글자는 높이기준 */
             font-size: 45px;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrap.content1>.content.cnt1>section>.art-top>article:nth-of-type(2){
+                display: none;
+
+            }
+            .content-wrap.content1>.content.cnt1>section>.art-top>article{
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hdr-top-wrap{
+                background-color: rgb(212, 0, 255);
+            }
         }
 
         </style>

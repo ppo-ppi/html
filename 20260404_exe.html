@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4월4일 어린이날</title>
+    <link rel="stylesheet" href="/html/css/all.min.css">
+    <link rel="stylesheet" href="/html/css/reset.css">
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Meow+Script&family=Monsieur+La+Doulaise&family=Pacifico&display=swap');
+
+body{
+    font-family: 'Funnel Sans';
+}
+/* 공통 */
+.content-wrap > .content > header {
+    text-align: center;
+}
+.content-wrap > .content > header > h2 {
+    line-height: 80px;
+    font-size: 40px;
+    font-family: 'Black Ops One';   /* 폰트 지정시 사용 */
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.content-wrap > .content > header > h3 {
+    width: calc(100% / 12 * 6);
+    margin: 0 auto;
+    font-size: 12px;
+}
+.content-wrap > .content > header > h4 {
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    width: calc(100% / 12 * 6);
+    margin: 0 auto;
+    font-size: 12px;
+}
+.content-wrap > .content {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.content-wrap > .content > section {
+   margin-top: 40px; 
+}
+.content-wrap > .content > section article {}
+.content-wrap > .content > section article > .image {
+    background-color: #ccc;
+    color: transparent;
+    /* 백그라운드 이미지를 사용할때 필수 값 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.content-wrap > .content > section article > .texts {}
+
+.content-wrap > .content > section article > .texts > h3{
+    line-height: 40px;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.content-wrap > .content > section article > .texts > h4{
+    line-height: 40px;
+    height: 40px;
+    overflow: hidden;
+    font-size: 14px;
+}
+.content-wrap > .content > section article > .texts > p {
+    height: 80px;
+    line-height: 20px;
+    overflow: hidden;
+    font-size: 12px;
+    font-family: 'Meow Script';
+}
+
+.content-wrap > .content > section article > .texts > button {}
+
+.content-wrap > .content > section article > .texts > .icons {
+    line-height: 40px;
+}
+.content-wrap > .content > section article > .texts > .icons > i {}
+
+/* 1. hdr-top-wrap */
+.hdr-top-wrap {
+    background-color: #212517;
+}
+.hdr-top-wrap > .hdr-top {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hdr-top-wrap > .hdr-top > i {
+    line-height: 40px;
+    color: #fff;
+    font-size: 35px;
+}
+
+/* 2. header */
+.hdr-wrap {
+    background-color: #A31F30;
+    color: #fff;
+}
+.hdr-wrap > header {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;  
+    justify-content: space-between;
+    line-height: 80px;
+    font-family: 'Black Ops One';   /* 폰트 지정시 사용 */
+}
+.hdr-wrap > header > h1 {
+    font-size: 25px;
+}
+.hdr-wrap > header > ul {
+    display: flex;
+    column-gap: 20px;
+    font-size: 20px;
+}
+.hdr-wrap > header > ul > li {}
+
+/* 3. content-wrap1 */
+.content-wrap.content-wrap1 {}
+.content-wrap.content-wrap1 > .content.cnt1 {}
+.content-wrap.content-wrap1 > .content.cnt1 > header {}
+.content-wrap.content-wrap1 > .content.cnt1 > header > h2 {
+    
+}
+.content-wrap.content-wrap1 > .content.cnt1 > header > h4 {
+    
+}
+
+.content-wrap.content-wrap1 > .content.cnt1 > section {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top {
+    display: flex;
+    column-gap: 20px;
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article > .image {
+    height: 320px;
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article > .image.i1 {
+    background-image: url('./html/image/cnt1_image1.png');
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article > .image.i2 {
+    background-image: url('./html/image/cnt1_image2.png');
+}
+
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article > .texts {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: calc( 100% / 6 * 0.5 );
+    padding-right: calc( 100% / 6 * 2 );
+    border: 1px solid #D9D9D9;
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article > .texts > h3 {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article > .texts > h4 {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article > .texts > p {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article > .texts > .icons {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-top > article > .texts > .icons > i {}
+
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm {
+    display: flex; 
+    margin-top: 40px;
+    column-gap: 20px;
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article {
+   
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .image {
+    height: 320px;
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .image.i3 {
+    background-image: url('./html/image/cnt1_image2-1.png');
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .image.i4 {
+    background-image: url('./html/image/cnt1_image2-2.png');
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .image.i5 {
+    background-image: url('./html/image/cnt1_image2-3.png');
+}
+
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .texts {
+    padding: 40px 20px;
+    border: 1px solid #D9D9D9;
+}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .texts > h3 {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .texts > h4 {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .texts > p {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .texts > .icons {}
+.content-wrap.content-wrap1 > .content.cnt1 > section > .art-btm > article > .texts > .icons > i {}
+
+/* 4. content-wrap2 */
+.content-wrap.content-wrap2 {}
+.content-wrap.content-wrap2 > .content.cnt2 {
+    width: 100%;    /* 헤더를 100% 채우기 위해 */
+    max-width: none; /* max-width 설정값 해제 */
+}
+.content-wrap.content-wrap2 > .content.cnt2 > header {
+    padding-top: 80px;
+    padding-bottom: 360px;
+    background-color: #A31F30;
+    color: #fff;
+}
+.content-wrap.content-wrap2 > .content.cnt2 > header > h2 {}
+.content-wrap.content-wrap2 > .content.cnt2 > header > h3 {
+    width: calc(80% / 12 * 6); /* 화면이 너무 커지면 한없이 커지게 되어서 */
+    max-width: 520px; /* 최대가 1080px인데 이 기준.*/
+}
+
+.content-wrap.content-wrap2 > .content.cnt2 > section {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: -320px;
+     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.content-wrap.content-wrap2 > .content.cnt2 > section > article {
+    display: flex;
+}
+.content-wrap.content-wrap2 > .content.cnt2 > section > article > .image {
+    width: 50%;
+    height: 440px;
+}
+.content-wrap.content-wrap2 > .content.cnt2 > section > article > .texts {
+    width: 50%;
+    text-align: center;
+    padding: 80px calc(100% / 12 * 1);   /* 가로는 계산해야함 근데 부모가 100%고, 12칸이라 얘도 100% * 12로 계산해야함..*/
+    background-color: #fff;
+}
+.content-wrap.content-wrap2 > .content.cnt2 > section > article > .texts > h3 {}
+.content-wrap.content-wrap2 > .content.cnt2 > section > article > .texts > h4 {
+}
+.content-wrap.content-wrap2 > .content.cnt2 > section > article > .texts > p {
+    height: 120px;
+    margin-top: 20px;
+}
+.content-wrap.content-wrap2 > .content.cnt2 > section > article > .texts > button {
+    margin-top: 20px;
+    line-height: 40px;
+    width: calc(100% / 6 * 4);   /* 텍스트가 50%로 줄어서. 100%는 부모임.*/
+    background-color: #212517;
+    border-radius: 20px;
+    color: #fff;
+}
+
+/* 5. content-wrap3 */
+.content-wrap.content-wrap3 {}
+.content-wrap.content-wrap3 > .content.cnt3 {}
+.content-wrap.content-wrap3 > .content.cnt3 > header {
+}
+.content-wrap.content-wrap3 > .content.cnt3 > header > h2 {}
+.content-wrap.content-wrap3 > .content.cnt3 > header > h4 {}
+
+.content-wrap.content-wrap3 > .content.cnt3 > section {
+    display: flex; 
+    column-gap: 20px;
+}
+.content-wrap.content-wrap3 > .content.cnt3 > section article {
+    height: 200px;
+    overflow: hidden;
+}
+.content-wrap.content-wrap3 > .content.cnt3 > section article:hover > .texts {
+    margin-top: -200px;
+}
+.content-wrap.content-wrap3 > .content.cnt3 > section article > .image {
+    height: 200px;
+}
+.content-wrap.content-wrap3 > .content.cnt3 > section article > .image.i7 {
+    background-image: url('./html/image/cnt3_image1.png');
+}
+.content-wrap.content-wrap3 > .content.cnt3 > section article > .image.i8 {
+    background-image: url('./html/image/cnt3_image2.png');
+}
+.content-wrap.content-wrap3 > .content.cnt3 > section article > .image.i9 {
+    background-image: url('./html/image/cnt3_image3.png');
+}
+.content-wrap.content-wrap3 > .content.cnt3 > section article > .image.i10 {
+    background-image: url('./html/image/cnt3_image4.png');
+}
+.content-wrap.content-wrap3 > .content.cnt3 > section article > .texts {
+    padding: 40px 20px;
+    color: #fff;
+    transition: margin-top 0.3s;
+    background-color: rgba(51,51,51,0.4);
+}
+
+.content-wrap.content-wrap3 > .content.cnt3 > section > article > .texts > h3 {}
+.content-wrap.content-wrap3 > .content.cnt3 > section > article > .texts > p {}
+
+/* 6. footer */
+.ftr-wrap {
+        background-color: #A31F30;
+}
+.ftr-wrap > footer {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+    color: #fff;
+
+}
+.ftr-wrap > footer > h4 {
+    line-height: 80px;
+    font-size: 25px;
+
+}
+.ftr-wrap > footer > address {
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+    width: calc(100% / 12 * 8);
+    margin: 0 auto;
+}
+.ftr-wrap > footer > .icons {
+    margin-top: 17px;
+    line-height: 80px;
+}
+.ftr-wrap > footer > .icons i {
+    font-size: 40px;
+}
+
+</style>
+
+<body>
+    <div class="hdr-top-wrap">
+        <div class="hdr-top">
+            <i class="fa-solid fa-sleigh"></i>
+        </div>
+    </div>
+    <div class="hdr-wrap">
+        <header>
+            <h1>logoHere</h1>
+            <ul>
+                <li>about</li>
+                <li>news</li>
+                <li>portfolio</li>
+            </ul>
+        </header>
+    </div>
+    <div class="content-wrap content-wrap1">
+        <div class="content cnt1">
+            <header>
+                <h2>contentTitle</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium blanditiis pariatur veritatis
+                    distinctio ex, dolores magni reprehenderit illo voluptatem voluptate repellat error dolor tenetur
+                    suscipit sequi. Repellendus ipsa perspiciatis amet!</h4>
+            </header>
+            <section>
+                <div class="art-top">
+                    <article>
+                        <div class="image i1"></div>
+                        <div class="texts">
+                            <h3>segmenttitle</h3>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error repellat aperiam
+                                voluptas minima. Facilis magnam, suscipit cumque harum ipsam voluptate distinctio
+                                itaque, doloribus, recusandae voluptatem sed perspiciatis consequuntur voluptas?</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image i2"></div>
+                        <div class="texts">
+                            <h3>segmenttitle</h3>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error repellat aperiam
+                                voluptas minima. Facilis magnam, suscipit cumque harum ipsam voluptate distinctio
+                                itaque, doloribus, recusandae voluptatem sed perspiciatis consequuntur voluptas?</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="art-btm">
+                    <article>
+                        <div class="image i3"></div>
+                        <div class="texts">
+                            <h3>segmenttitle</h3>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error repellat aperiam
+                                voluptas minima. Facilis magnam, suscipit cumque harum ipsam voluptate distinctio
+                                itaque, doloribus, recusandae voluptatem sed perspiciatis consequuntur voluptas?</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image i4"></div>
+                        <div class="texts">
+                            <h3>segmenttitle</h3>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error repellat aperiam
+                                voluptas minima. Facilis magnam, suscipit cumque harum ipsam voluptate distinctio
+                                itaque, doloribus, recusandae voluptatem sed perspiciatis consequuntur voluptas?</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="image i5"></div>
+                        <div class="texts">
+                            <h3>segmenttitle</h3>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error repellat aperiam
+                                voluptas minima. Facilis magnam, suscipit cumque harum ipsam voluptate distinctio
+                                itaque, doloribus, recusandae voluptatem sed perspiciatis consequuntur voluptas?</p>
+                            <div class="icons">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+        </div>
+    </div>
+    <div class="content-wrap content-wrap2">
+        <div class="content cnt2">
+            <header>
+                <h2>contentTitle</h2>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, unde! Tempora ullam hic amet nostrum
+                    suscipit reiciendis? Sapiente quod voluptas hic cumque rem quisquam in tempore quia debitis
+                    adipisci. Impedit?</h3>
+
+            </header>
+            <section>
+                <article>
+                    <div class="image i6">
+                        <video src="./html/image/cnt2.mp4"></video>
+                    </div>
+                    <div class="texts">
+                        <h3>segmentTitle</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla cum. Ut atque ullam
+                            saepe iusto laudantium aspernatur veritatis eveniet dolores tempore quibusdam alias, odio,
+                            eligendi ratione nulla impedit nobis?</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ut et ratione enim nobis
+                            accusantium error hic distinctio. Enim nulla ipsam soluta labore repellendus perspiciatis
+                            veritatis perferendis eveniet, consectetur provident.</p>
+                        <button>Button</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <div class="content-wrap content-wrap3">
+        <div class="content cnt3">
+            <header>
+                <h2>ContentTitle</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem numquam hic qui est et ab quas
+                    dicta ipsa repellendus porro, laudantium iusto blanditiis molestias esse quo eaque eius sapiente
+                    veniam!</h4>
+            </header>
+            <section>
+                <article>
+                    <div class="image i7">이미지</div>
+                    <div class="texts">
+                        <h3>segmenttitle</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sint eos sed in dolore?
+                                Ad repellat, debitis consectetur eius, nostrum aliquam aut explicabo dicta illum, sint
+                                iure harum praesentium ducimus?</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image i8">이미지</div>
+                    <div class="texts">
+                        <h3>segmenttitle</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sint eos sed in dolore?
+                                Ad repellat, debitis consectetur eius, nostrum aliquam aut explicabo dicta illum, sint
+                                iure harum praesentium ducimus?</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image i9">이미지</div>
+                    <div class="texts">
+                        <h3>segmenttitle</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sint eos sed in dolore?
+                                Ad repellat, debitis consectetur eius, nostrum aliquam aut explicabo dicta illum, sint
+                                iure harum praesentium ducimus?</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="image i10">이미지</div>
+                    <div class="texts">
+                        <h3>segmenttitle</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sint eos sed in dolore?
+                                Ad repellat, debitis consectetur eius, nostrum aliquam aut explicabo dicta illum, sint
+                                iure harum praesentium ducimus?</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <div class="ftr-wrap">
+        <footer>
+            <h4>logo Here</h4>
+            <address>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt enim eum mollitia nostrum
+                inventore sunt maiores neque sit, deleniti quaerat dicta soluta non repudiandae animi iusto quos omnis
+                temporibus dolorum?</address>
+            <div class="icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
