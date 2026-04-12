@@ -14,7 +14,7 @@ body{
     max-width: 1080px;
     margin: 0 auto;
     text-align: center;
-    background-image: url(../image/hrd-wrap.png);
+    background-image: url(/html/image/hrd-wrap.png);
     background-repeat: repeat-x;
 }
 .hdr-top-wrap>.hdr-top>i{
@@ -142,10 +142,10 @@ body{
 .content-wrap1>.cnt1>section>.art-top>article>.image{
 }
 .content-wrap1>.cnt1>section>.art-top>article>.image.i1{
-    background-image: url(../image/cnt1_image1.png);
+    background-image: url(/html/image/cnt1_image1.png);
 }
 .content-wrap1>.cnt1>section>.art-top>article>.image.i2{
-    background-image: url(../image/cnt1_image2.png);
+    background-image: url(/html/image/cnt1_image2.png);
 }
 .content-wrap1>.cnt1>section>.art-top>article>.image.i2{}
 .content-wrap1>.cnt1>section>.art-top article>.texts{
@@ -173,13 +173,13 @@ body{
 .content-wrap1>.cnt1>section>.art-btm>article>.image{
 }
 .content-wrap1>.cnt1>section>.art-btm>article>.image.i3{
-    background-image: url(../image/cnt1_image2-1.png);
+    background-image: url(/html/image/cnt1_image2-1.png);
 }
 .content-wrap1>.cnt1>section>.art-btm>article>.image.i4{
-    background-image: url(../image/cnt1_image2-2.png);
+    background-image: url(/html/image/cnt1_image2-2.png);
 }
 .content-wrap1>.cnt1>section>.art-btm>article>.image.i5{
-    background-image: url(../image/cnt1_image2-3.png);
+    background-image: url(/html/image/cnt1_image2-3.png);
 }
 .content-wrap1>.cnt1>section>.art-btm>article>.texts{
     padding: 40px 20px;
@@ -279,16 +279,16 @@ body{
     height: 200px;
 }
 .content-wrap3>.cnt3>section>article>.image.i7{
-    background-image: url(../image/cnt3_image1.png);
+    background-image: url(/html/image/cnt3_image1.png);
 }
 .content-wrap3>.cnt3>section>article>.image.i8{
-    background-image: url(../image/cnt3_image2.png);
+    background-image: url(/html/image/cnt3_image2.png);
 }
 .content-wrap3>.cnt3>section>article>.image.i9{
-    background-image: url(../image/cnt3_image3.png);
+    background-image: url(/html/image/cnt3_image3.png);
 }
 .content-wrap3>.cnt3>section>article>.image.i10{
-    background-image: url(../image/cnt3_image4.png);
+    background-image: url(/html/image/cnt3_image4.png);
 }
 
 .content-wrap3>.cnt3>section>article>.texts{
@@ -334,158 +334,44 @@ body{
 }
 .ftr-wrap>footer>.icons>i{}
 
-@media screen and (max-width: 1024px) {
-    /* 이 안에 값들이 가로 사이즈 1024px 이하일때 적용 */
-    
-.content-wrap1>.cnt1>section>.art-top>article:nth-of-type(2) {
+/* 태블릿 */
+@media (max-width: 1024px) {
+  /* 1024px 이하에서 적용 */
+  .art-top>article:nth-of-type(2) {
     display: none;
-}
-.content-wrap1>.cnt1>section>.art-btm>article:nth-of-type(3){
+  }
+  .art-btm>article:nth-of-type(3) {
     display: none;
-}
-.content-wrap2>.cnt2>section>article>.texts{
+  }
+  .content-wrap2>.cnt2>section>article>.texts{
     display: none;
-}
-.content-wrap2>.cnt2>section>article>.image{
+  }
+  .content-wrap2>.cnt2>section>article>.image {
     width: 100%;
     height: 500px;
-}
-.content-wrap3>.cnt3>header{
-   display: none; 
-}
-.content-wrap3>.cnt3>section>article:nth-of-type(3){
-    display: none; 
-}
-.content-wrap3>.cnt3>section>article:nth-of-type(4){
-    display: none; 
-}
-.content-wrap>.content{
-    max-width: 610px;
-}
-
-.hdr-top-wrap>.hdr-top{
-    max-width: 610px;
-}
-.hdr-wrap>header{
-  max-width: 610px;  
-}
-.content-wrap2>.cnt2{
-    max-width: none;
-    width: 100%;
-}
-.content-wrap2>.cnt2>section{
-   width: 80%; 
-   max-width: 610px;  
-}
-.content-wrap{
+  }
+  /* 두개씩 나열하기 위함. flex-wrap을 사용하려면 부모값의 100%가 넘어가면 다음줄로 감.. */
+  .cnt3>section article{
+    width: calc(50% - 20px);
+  }
+  .cnt3>section{
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+  .content-wrap{
     margin-top: 40px;
+  }
+  .content-wrap1>.cnt1>section>.art-btm{
+    margin-top: 0;
+  }
+  .content-wrap2>.cnt2>header{
+    padding-bottom: 300px;
 }
-.content-wrap>.content>header>h4 {
-    width: 100%;
-}
-
-.content-wrap.content-wrap2 > .content.cnt2 > header > h4{
-    width: 80%; 
-    max-width: 610px;
-}
-.ftr-wrap>footer{
-    max-width: 610px;
-}
-.content-wrap.content-wrap3{
-    margin-top: 80px;
-}
-.content-wrap1>.cnt1>section>.art-btm{
-    margin-top: 0px;
-}
-.content-wrap2>.cnt2>header{
-    padding-bottom: 320px;
-}
-
 .content-wrap2>.cnt2>section{
-    margin-top: -280px;
+    margin-top: -260px;
 }
+.ftr-wrap{
+    padding-bottom: 80px;
 }
 
-@media screen and (max-width: 420px) {
-    .hdr-wrap{
-        /* display: none; */
-    }
-    .hdr-top-wrap{
-       /* display: none;  */
-    }
-    .content-wrap>.content{
-        width: 90%;
-    }
-    .content-wrap1>.cnt1>section>.art-top article>.texts{
-        display: none;
-    }
-    .content-wrap1>.cnt1>section>.art-top{
-        display: block;
-    }
-    .content-wrap1>.cnt1>section>.art-top>article:nth-of-type(2){
-        display: block;
-        margin-top: 20px;
-    }
-    .content-wrap1>.cnt1>section>.art-btm{
-        display: none;
-    }
-    .content-wrap2>.cnt2>header{
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-    .content-wrap2>.cnt2>section{
-        margin-top: 0px;
-    }
-    .content-wrap2>.cnt2>section>article>.image{
-        height: 240px;
-    }
-    .content-wrap3>.cnt3>section{
-        display: block;
-    }
-    .content-wrap3>.cnt3>section>article:nth-of-type(3),
-    .content-wrap3>.cnt3>section>article:nth-of-type(4){
-        display: block;
-    }
-    .content-wrap3>.cnt3>section>article{
-        margin-top: 40px;
-    }
-    .content-wrap2>.cnt2>section{
-        width: 100%;
-    }
-    .content-wrap.content-wrap3{
-        margin-top: 40px;
-    }
-    .ftr-wrap{
-        margin-top: 40px;
-        padding-bottom: 0px;
-    }
-    .ftr-wrap>footer>address{
-        width: 100%;
-        height: 80px;
-    }
-    .hdr-wrap {
-        display: block;
-    }
-
-    .hdr-wrap > header {
-        justify-content: space-between;
-        line-height: 80px;
-    }
-
-    .hdr-wrap > header > ul {
-        display: none;
-    }
-
-    .hdr-wrap > header > h1 {
-        font-size: 18px;
-    }
-
-    .hdr-top-wrap>.hdr-top{
-        text-align: right;
-    }
-
-    .content-wrap>.content>header>h2{
-        font-size: 25px;
-        line-height: 40px;
-    }
 }
